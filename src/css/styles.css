@@ -4,8 +4,8 @@
     --light: #F5E8D8;
     --dark: #1C1C1C;
     --primary: #6B8E8A;
-    --secondary: #FF6F61;
 
+    --secondary: light-dark(#ca372a, #FF6F61);
     --fg: light-dark(var(--dark), var(--light));
     --bg: light-dark(var(--light), var(--dark));
 
@@ -47,6 +47,16 @@ p {
     margin: 0.4em 0 0 0;
     max-width: 60ch;
     line-height: 1.6;
+}
+
+a {
+    color: var(--secondary);
+}
+
+.picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .slogan {
@@ -116,6 +126,23 @@ nav ul a:hover, .active {
 main {
     order: 3;
     margin-top: 20px;
+}
+
+.picture-block {
+    margin-top: 10px;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    grid-column-gap: 30px;
+    grid-row-gap: 30px; 
+}
+
+.photo-tag {
+    width: 100%;
+    max-width: unset;
+    text-align: center;
+    font-size: 0.8rem;
+    margin-top: 10px;
 }
 
 footer {
