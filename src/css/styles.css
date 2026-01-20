@@ -1,13 +1,31 @@
 :root {
-  --background: #1C1C1C;
-  --primary: #6B8E8A;
-  --secondary: #FF6F61;
-  --foreground: #F5E8D8;
+    color-scheme: light dark;
+
+    --light: #F5E8D8;
+    --dark: #1C1C1C;
+    --primary: #6B8E8A;
+    --secondary: #FF6F61;
+
+    --fg: light-dark(var(--dark), var(--light));
+    --bg: light-dark(var(--light), var(--dark));
+
+    color: var(--fg);
+    background: var(--bg);
+}
+
+:root:has(option[id="theme-system"]:checked) {
+    color-scheme: light dark;
+}
+
+:root:has(option[id="theme-light"]:checked) {
+    color-scheme: light;
+}
+
+:root:has(option[id="theme-dark"]:checked) {
+    color-scheme: dark;
 }
 
 body {
-    background-color: var(--background);
-    color: var(--foreground);
     font-family: 'Inter', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1rem;
 }
@@ -67,12 +85,13 @@ aside {
     grid-row: span 2;
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 
 nav {
-    border-right: 2px solid var(--foreground);
+    margin-top: 6em;
+    color: var(--fg);
     text-align: right;
+    border-right: 2px solid var(--fg);
     padding-right: 10px;
 }
 
@@ -85,7 +104,7 @@ nav ul li {
 }
 
 nav ul a {
-    color: var(--foreground);
+    color: var(--fg);
     text-decoration: none;
     font-size: 0.9rem;
 }
@@ -122,7 +141,8 @@ footer {
     }
 
     nav {
-        border: 1px solid var(--foreground);
+        margin-top: 0;
+        border: 1px solid var(--fg);
         text-align: left;
         padding-right: 10px;
     }

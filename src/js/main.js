@@ -1,1 +1,2 @@
-console.log("Test av JavaScript");
+"use strict";
+

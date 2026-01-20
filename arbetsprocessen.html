@@ -12,22 +12,46 @@
   </head>
   <body>
     
-    <h1>Automatisering & publicering</h1>
-    <p class="slogan">Front-end baserad webbutveckling</p>
+    <div class="wrapper">
+        <header>
+            <div class="lightswitch">
+                <label>Färgtema:</label><br>
 
-    <nav>
-      <ul>
-        <li><a href="/">Startsida</a></li>
-        <li><a href="/bilder">Bilder</a></li>
-        <li><a href="/arbetsprocessen">Arbetsprocessen</a></li>
-      </ul>
-    </nav>
-    
-    <h2>Arbetsprocessen</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut  
-    justo in nisl pharetra pretium. Nam ac sapien a urna bibendum varius. 
-    Fusce placerat aliquam justo, ut dapibus lorem ornare et. Sed nec 
-    dui  quis metus suscipit commodo in sit..</p>
+                <select id="theme-select">
+                    <option id="theme-system" value="light-dark">System</option>
+                    <option id="theme-light" value="light">Ljus</option>
+                    <option id="theme-dark" value="dark">Mörk</option>
+                </select>
+            </div>
+            
+
+            <h1>Automatisering & publicering</h1>
+            <p class="slogan">Front-end baserad webbutveckling</p>
+        </header>
+
+        <aside>
+            <nav>
+                <ul>
+                    <li><a href="/" class="active">Startsida</a></li>
+                    <li><a href="/bilder">Bilder</a></li>
+                    <li><a href="/arbetsprocessen">Arbetsprocessen</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main>
+            <h2>Arbetsprocessen</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut  
+            justo in nisl pharetra pretium. Nam ac sapien a urna bibendum varius. 
+            Fusce placerat aliquam justo, ut dapibus lorem ornare et. Sed nec 
+            dui  quis metus suscipit commodo in sit..</p>
+        </main>
+
+        <footer>
+                &copy; Kevin Maninnerby <br>
+                webbutvecklingsprogrammet MIUN
+        </footer>
+    </div>
 
     <script type="module" src="/src/js/main.js"></script>
   </body>
