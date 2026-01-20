@@ -1,6 +1,6 @@
 :root {
   --background: #1C1C1C;
-  --primary: #8A8635;
+  --primary: #6B8E8A;
   --secondary: #FF6F61;
   --foreground: #F5E8D8;
 }
@@ -9,6 +9,7 @@ body {
     background-color: var(--background);
     color: var(--foreground);
     font-family: 'Inter', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1rem;
 }
 
 h1 {
@@ -27,6 +28,7 @@ h2 {
 p {
     margin: 0.4em 0 0 0;
     max-width: 60ch;
+    line-height: 1.6;
 }
 
 .slogan {
@@ -36,7 +38,7 @@ p {
 }
 
 .wrapper {
-    max-width: 1000px;
+    max-width: 1080px;
     margin: 0 auto;
     padding: 40px;
     display: grid;
@@ -48,6 +50,16 @@ p {
 
 header {
     order: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.lightswitch {
+    justify-self: flex-start;
+    align-self: flex-end;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;;
 }
 
 aside {
@@ -85,4 +97,40 @@ nav ul a:hover, .active {
 main {
     order: 3;
     margin-top: 20px;
+}
+
+footer {
+    order: 4;
+    margin-top: 40px;
+    grid-column: span 2;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    header, 
+    aside, 
+    main, 
+    footer {
+        order: unset;
+        grid-column: 1;
+    }
+
+    nav {
+        border: 1px solid var(--foreground);
+        text-align: left;
+        padding-right: 10px;
+    }
+    nav ul {
+        margin: 0;
+        padding: 10px 30px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
 }
