@@ -1,12 +1,25 @@
+:root {
+  --background: #1C1C1C;
+  --primary: #8A8635;
+  --secondary: #FF6F61;
+  --foreground: #F5E8D8;
+}
+
 body {
-    background-color: #1C1C1C;
-    color: #F5E8D8;
+    background-color: var(--background);
+    color: var(--foreground);
     font-family: 'Inter', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 h1 {
     margin: 0;
-    color: #FF6F61;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+h2 {
+    margin: 0;
+    color: var(--secondary);
     font-weight: bold;
     max-width: 20ch;
 }
@@ -14,4 +27,62 @@ h1 {
 p {
     margin: 0.4em 0 0 0;
     max-width: 60ch;
+}
+
+.slogan {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: auto auto;
+    column-gap: 40px;
+    row-gap: 20px;
+}
+
+header {
+    order: 2;
+}
+
+aside {
+    order: 1;
+    grid-row: span 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+nav {
+    border-right: 2px solid var(--foreground);
+    text-align: right;
+    padding-right: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    padding: 5px 0;
+}
+
+nav ul a {
+    color: var(--foreground);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+nav ul a:hover, .active {
+    color: var(--secondary);
+}
+
+main {
+    order: 3;
+    margin-top: 20px;
 }
