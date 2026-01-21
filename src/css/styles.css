@@ -13,18 +13,6 @@
     background: var(--bg);
 }
 
-:root:has(option[id="theme-system"]:checked) {
-    color-scheme: light dark;
-}
-
-:root:has(option[id="theme-light"]:checked) {
-    color-scheme: light;
-}
-
-:root:has(option[id="theme-dark"]:checked) {
-    color-scheme: dark;
-}
-
 body {
     font-family: 'Inter', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1rem;
@@ -67,11 +55,12 @@ a {
 
 .wrapper {
     max-width: 1080px;
+    min-height: 101vh;
     margin: 0 auto;
     padding: 40px;
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto 1fr;
     column-gap: 40px;
     row-gap: 20px;
 }
@@ -117,6 +106,7 @@ nav ul a {
     color: var(--fg);
     text-decoration: none;
     font-size: 0.9rem;
+    font-weight: 600;
 }
 
 nav ul a:hover, .active {
