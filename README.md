@@ -1,6 +1,6 @@
 # Automatisering & publicering
 
-Detta projekt är skapat i kursen Front-end baserad webbutveckling på Mittuniversitetet. Syftet med webbplatsen är att öva på att automatisera publiceringen av webbplatser med verktyg som Node JS och Vite. Webbplatsen finns tillgänglig vid: 
+Detta projekt är skapat i kursen Front-end baserad webbutveckling på Mittuniversitetet. Syftet med webbplatsen är att öva på att automatisera publiceringen av webbplatser med verktyg som Node JS och Vite. Webbplatsen finns tillgänglig vid: frontend-labb1.netlify.app
 
 ## Arbetsprocess:
 Denna webbplats har skapats med hjälp av Node JS och Vite. Eftersom Node JS redan fanns installerat på datorn skapades projektet enkelt genom att konfigurera Vite med hjälp datorns terminal.  
