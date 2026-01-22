@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Automatiseringsuppgift</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <script type="module" crossorigin src="/assets/main-C5XXPu4d.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/main-QdsI0NDM.css">
+  </head>
+  <body>
+    
+    <div class="wrapper">
+        <header>
+            <div class="lightswitch">
+                <label>Färgtema:</label><br>
+
+                <select id="theme-select">
+                    <option id="theme-system" value="light dark">System</option>
+                    <option id="theme-light" value="light">Ljus</option>
+                    <option id="theme-dark" value="dark">Mörk</option>
+                </select>
+            </div>
+            
+
+            <h1>Automatisering & publicering</h1>
+            <p class="slogan">Front-end baserad webbutveckling</p>
+        </header>
+
+        <aside>
+            <nav>
+                <ul>
+                    <li><a href="/">Startsida</a></li>
+                    <li><a href="/bilder">Bilder</a></li>
+                    <li><a href="/arbetsprocessen" class="active">Arbetsprocessen</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main>
+            <h2>Arbetsprocessen</h2>
+            <p>
+                Denna webbplats har skapats med hjälp av Node JS och Vite. Eftersom Node JS redan fanns installerat 
+                på datorn skapades projektet enkelt genom att konfigurera Vite med hjälp datorns terminal.
+            </p>
+
+            <p>
+                Vid konfigurationen av Vite installerades öven stöd för Sass, trots att Sass inte ska användas i detta 
+                projekt. Senare i projektet installerades även ett NPM paket för komprimering av bilder, Vite Image Optimizer. 
+                Detta konfigurerades även i filen vite.config. 
+            </p>
+
+            <p>
+                I denna fas av utvecklingsarbetet versionhanterades även projektet med hjälp av Git. Förutom main-branchen 
+                lades även dev-branch till för fortsatt utvecklingsarbete.
+            </p>
+
+            <p>
+                Webbplatsen är utvecklad i HTML, CSS och en mindre mängd JavaScript. Inledningsvis skapades grundläggande 
+                layout i index.html, därefter utökades webbplatsen med ytterligare två undersidor, ”bilder.html” och 
+                ”arbetsprocessen.html”. Dessa undersidor konfigurerades även i vite.config. I denna fas hämtades även bilder
+                till "bilder.html" från webbplatsen unsplash.com, dessa bilder har manuellt blivit omvandlade till webp.
+            </p>
+
+            <p>
+                Samtliga sidor uppdaterades därefter med relevant innehåll, enhetlig design och konsekvent funktionalitet. 
+                Ett  färgschema implementerades med stöd för användaren att lagra önskat färgschema i Localstorage. 
+            </p>
+
+            <p>
+                Avslutningsvis slogs dev-branchen samman med main-branchen. Vite iptimerade projektets filer och genererade 
+                en komprimerad version av webbplatsen i en separat mapp. Därefter publicerades filerna till GitHub med hjälp 
+                av git push. Webbplatsen är sedan publicerad med hjälp av netlify.
+            </p>
+
+        </main>
+
+        <footer>
+                &copy; <span class="year"></span>Kevin Maninnerby <br>
+                Webbutvecklingsprogrammet MIUN
+        </footer>
+    </div>
+
+  </body>
+</html>
