@@ -135,6 +135,35 @@ main {
     margin-top: 10px;
 }
 
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  padding: 0.5rem;
+  text-align: left;
+}
+
+thead {
+text-align: left;
+margin: 0;
+padding: 0;
+}
+
+.course-table {
+    width: 100%;
+    margin-top: 10px;
+}
+
+#course-code, 
+#course-name, 
+#course-progression {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 footer {
     order: 4;
     margin-top: 40px;
