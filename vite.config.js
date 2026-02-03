@@ -8,7 +8,8 @@ export default defineConfig({
         input: {
             main: resolve(__dirname, "index.html"),
             bilder: resolve(__dirname, "bilder.html"),
-            arbetsprocess: resolve(__dirname, "arbetsprocessen.html")
+            arbetsprocess: resolve(__dirname, "arbetsprocessen.html"),
+            kurser: resolve(__dirname, "kurser.html")
         }
     }
   },
