@@ -6,20 +6,22 @@ document.addEventListener("DOMContentLoaded", async () => {
     getData();
     pageTheme();
 
+    // Händelselyssnare sortering
     document.getElementById("course-code").addEventListener("click", () => {
         const sortByCode = [...allCourses].sort((a, b) => a.code.localeCompare(b.code));
         displayCourses(sortByCode);
     });
-
     document.getElementById("course-name").addEventListener("click", () => {
         const sortByName = [...allCourses].sort((a, b) => a.coursename.localeCompare(b.coursename));
         displayCourses(sortByName);
     });
-
     document.getElementById("course-progression").addEventListener("click", () => {
         const sortByProgression = [...allCourses].sort((a, b) => a.progression.localeCompare(b.progression));
         displayCourses(sortByProgression);
     });
+
+    // Händelselyssnare sökfält
+    document.getElementById("search-courses").addEventListener("input", searchCourse);
 });
 
 async function getData() {
@@ -55,6 +57,16 @@ function displayCourses(courses) {
             </tr>
         `;
     });
+}
+
+function searchCourse() {
+    let searchPhrase = document.getElementById("search-courses").value;
+    let searchResult = allCourses.filter((course) => 
+        course.coursename.toLowerCase().includes(searchPhrase) ||
+        course.code.toLowerCase().includes(searchPhrase)
+    );
+    
+    displayCourses(searchResult)
 }
  
 function pageTheme() {
