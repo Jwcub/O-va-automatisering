@@ -34,26 +34,34 @@
             <nav>
                 <ul>
                     <li><a href="/">Startsida</a></li>
-                    <li><a href="/bilder" class="active">Bilder</a></li>
+                    <li><a href="/bilder">Bilder</a></li>
                     <li><a href="/arbetsprocessen">Arbetsprocessen</a></li>
-                    <li><a href="/kurser">Kurser</a></li>
+                    <li><a href="/kurser" class="active">Kurser</a></li>
                 </ul>
             </nav>
         </aside>
 
         <main>
-            <h2>Bilder</h2>
-            
-            <div class="picture-block">
-                <img src="/img/pic1.webp" alt="" class="picture">
-                <img src="/img/pic2.webp" alt="" class="picture">
-                <img src="/img/pic3.webp" alt="" class="picture">
-                <img src="/img/pic4.webp" alt="" class="picture">
-                <img src="/img/pic5.webp" alt="" class="picture">
-                <img src="/img/pic6.webp" alt="" class="picture">
+            <h2>Kurser</h2>
+
+            <div class="searchfield">
+                <label>Sök: 
+                    <input type="search" id="search-courses" name="q">
+                </label>
             </div>
 
-            <p class="photo-tag">Pictures from: <a href="unsplash.com">Unsplash.com</a></p>    
+            <table class="course-table">
+                <thead>
+                    <tr>
+                        <th><span id="course-code">Kurskod</span></th>
+                        <th><span id="course-name">Namn</span></th>
+                        <th><span id="course-progression">Progression</span></th>
+                    </tr>
+                </thead>
+                <tbody id="course-tbody">
+                    <!-- DOM innehåll här -->
+                </tbody>
+            </table>
 
         </main>
 
